@@ -157,9 +157,6 @@
             hl_shortcut = "Keyword";
           };
         }
-        #
-        # Nix Config
-        #
         (padding 1) { 
           type = "button";
           val = "  Nix Config";
@@ -184,12 +181,9 @@
             hl_shortcut = "Keyword";
           };
         }
-        #
-        # NeoVim Config
-        #
         (padding 1) {
           type = "button";
-          val = "  Quit Neovim";
+          val = "  Quit Neovim";
           on_press.raw = "function() vim.cmd[[qa]] end";
           opts = {
             # hl = "comment";
@@ -211,12 +205,7 @@
             hl_shortcut = "Keyword";
           };
         }
-        (padding 1)
-        #
-        # Footer
-        #
       ];
     };
   };
 }
-
