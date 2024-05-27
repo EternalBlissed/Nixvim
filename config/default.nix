@@ -1,9 +1,11 @@
+{ pkgs, ... }:
 {
   imports = [
+    ./alpha.nix
     ./bufferline.nix
     ./cmp.nix
     ./git.nix
-    ./lightline.nix
+    ./lualine.nix
     ./lsp/default.nix
     ./lsp/fidget.nix
     ./lsp/none-ls.nix
@@ -14,8 +16,12 @@
     ./utils/auto-pairs.nix
     ./utils/autosave.nix
     ./utils/blankline.nix
+    ./utils/neocord.nix
+    ./utils/neoscroll.nix
     ./utils/telescope.nix
     ./utils/toggleterm.nix
+    ./utils/persistence.nix
+    ./utils/project.nix
     ./utils/which-key.nix
     ./utils/wilder.nix
   ];
@@ -27,6 +33,27 @@
       transparent_background = true;
     };
   };
+  
+  extraPlugins = with pkgs.vimPlugins; [
+    nvim-scrollbar
+  ];
+
+  extraConfigLua = ''
+    require("scrollbar").setup({
+      handle = {
+        blend = 75,
+      },
+      marks = {
+        Cursor = {
+          text = " ",
+        },
+      handlers = {
+          gitsigns = true,
+          search = true,
+        },
+      }
+    })
+  '';
 
   globals.mapleader = " ";
 

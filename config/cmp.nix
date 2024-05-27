@@ -6,6 +6,7 @@
       enable = true;
       suggestion.enabled = false;
       panel.enabled = false;
+      filetypes = { nix = false; };
     };
 
     cmp-buffer = { enable = true; };
