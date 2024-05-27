@@ -9,7 +9,6 @@ pkgs.mkShell {
    # JavaScript
     bun
     nodejs
-    vue
 
     # Tools
     ripgrep
