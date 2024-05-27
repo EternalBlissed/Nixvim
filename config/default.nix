@@ -41,7 +41,7 @@
   extraConfigLua = ''
     require("scrollbar").setup({
       handle = {
-        blend = 75,
+        blend = 80,
       },
       marks = {
         Cursor = {
