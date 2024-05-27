@@ -1,6 +1,6 @@
 {
   plugins.auto-save = {
-    enable = false;
+    enable = true;
     enableAutoSave = true;
   };
 }
