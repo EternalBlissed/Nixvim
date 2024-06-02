@@ -111,6 +111,29 @@
         }
         (padding 1) {
           type = "button";
+          val = "  Recent Projects";
+          on_press.raw = "require('telescope').load_extension('projects')";
+          opts = {
+            keymap = [
+              "n"
+              "p"
+              ":Telescope projects <CR>"
+              {
+                noremap = true;
+                silent = true;
+                nowait = true;
+              }
+            ];
+            shortcut = "p";
+            position = "center";
+            cursor = 3;
+            width = 38;
+            align_shortcut = "right";
+            hl_shortcut = "Keyword";
+          };
+        }
+        (padding 1) {
+          type = "button";
           val = "  Find Text";
           on_press.raw = "require('telescope.builtin').live_grep";
           opts = {
@@ -183,7 +206,7 @@
         }
         (padding 1) {
           type = "button";
-          val = "  Quit Neovim";
+          val = "  Quit Neovim";
           on_press.raw = "function() vim.cmd[[qa]] end";
           opts = {
             # hl = "comment";
