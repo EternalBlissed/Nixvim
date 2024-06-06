@@ -33,7 +33,7 @@
       transparent_background = true;
     };
   };
-  
+
   extraPlugins = with pkgs.vimPlugins; [
     nvim-scrollbar
   ];
