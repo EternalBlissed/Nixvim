@@ -11,6 +11,10 @@
         shellharden.enable = true;
         shfmt.enable = true;
         prettierd.enable = true;
+        prettier = { 
+          enable = true; 
+          disableTsServerFormatter = true;
+        };
       };
     };
   };

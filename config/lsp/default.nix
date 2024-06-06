@@ -10,6 +10,7 @@
         tsserver.enable = true;
         vuels.enable = true;
         tailwindcss.enable = true;
+        astro.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";

@@ -16,6 +16,7 @@
     ./utils/auto-pairs.nix
     ./utils/autosave.nix
     ./utils/blankline.nix
+    ./utils/image.nix
     ./utils/neocord.nix
     ./utils/neoscroll.nix
     ./utils/telescope.nix
