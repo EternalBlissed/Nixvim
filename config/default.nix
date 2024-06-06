@@ -36,6 +36,28 @@
 
   extraPlugins = with pkgs.vimPlugins; [
     nvim-scrollbar
+
+    (pkgs.vimUtils.buildVimPlugin {
+      pname = "nvim-tetris";
+      version = "2021-06-28";
+      src = pkgs.fetchFromGitHub {
+        owner = "alec-gibson";
+        repo = "nvim-tetris";
+        rev = "d17c99fb527ada98ffb0212ffc87ccda6fd4f7d9";
+        hash = "sha256-+69Fq5aMMzg9nV05rZxlLTFwQmDyN5/5HmuL2SGu9xQ=";
+      };
+    })
+
+    (pkgs.vimUtils.buildVimPlugin {
+      pname = "leetcode-nvim";
+      version = "2024-01-28";
+      src = pkgs.fetchFromGitHub {
+        owner = "kawre";
+        repo = "leetcode.nvim";
+        rev = "f114abc5dd7b9320a1b82eae88fdc80995296b6d";
+        hash = "sha256-yaK3xESY3+rtExONEcsOQTQH9y4wstjkY5yR/kIhClc=";
+      };
+    })
   ];
 
   extraConfigLua = ''
