@@ -5,3 +5,5 @@ Give it a try with this two-liner:
 - `nix develop github:eternalblissed/Nixvim`
 - `nix run github:eternalblissed/Nixvim`
 
+```
+

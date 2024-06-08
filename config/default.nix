@@ -4,6 +4,7 @@
     ./alpha.nix
     ./bufferline.nix
     ./cmp.nix
+    ./copilot-chat.nix
     ./git.nix
     ./lualine.nix
     ./lsp/default.nix

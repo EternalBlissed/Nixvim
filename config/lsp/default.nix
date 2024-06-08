@@ -11,6 +11,7 @@
         vuels.enable = true;
         tailwindcss.enable = true;
         astro.enable = true;
+        marksman.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";

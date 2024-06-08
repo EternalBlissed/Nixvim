@@ -1,7 +1,17 @@
 # # Source: https://github.com/hmajid2301/dotfiles/blob/ab7098387426f73c461950c7c0a4f8fb4c843a2c/home-manager/editors/nvim/plugins/coding/cmp.nix
 {
   plugins = {
-    luasnip.enable = true;
+
+    luasnip = {
+      enable = true;
+      fromLua = [
+        {
+          lazyLoad = true;
+          paths = ./snippets;
+        }
+      ];
+    };
+
     copilot-lua = {
       enable = true;
       suggestion.enabled = false;
@@ -27,6 +37,7 @@
       enable = true;
 
       settings = {
+        autoEnableSources = true;
         snippet.expand = ''
           function(args)
             require('luasnip').lsp_expand(args.body)
@@ -42,6 +53,9 @@
           { name = "nvim_lua"; }
           { name = "path"; }
           { name = "copilot"; }
+
+          { name = "treesitter"; }
+          { name = "zsh"; }
         ];
 
         formatting = {
