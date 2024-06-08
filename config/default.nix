@@ -18,6 +18,7 @@
     ./utils/autosave.nix
     ./utils/blankline.nix
     ./utils/image.nix
+    ./utils/markdown-preview.nix
     ./utils/neocord.nix
     ./utils/neoscroll.nix
     ./utils/telescope.nix
@@ -72,8 +73,6 @@
       };
     })
   ];
-
-
 
   extraConfigLua = ''
     require("scrollbar").setup({
@@ -223,6 +222,18 @@
       key = "<leader>dt";
       action = "<CMD>TroubleToggle<CR>";
       options.desc = "Toggle trouble";
+    }
+
+    # Markdown Preview 
+    {
+      key = "<leader>m";
+      action = "<cmd>MarkdownPreview<CR>";
+      options.desc = "Start markdown preview server";
+    }
+    {
+      key = "<leader>M";
+      action = "<cmd>MarkdownPreviewStop<CR>";
+      options.desc = "Stop markdown preview server";
     }
 
     # Rust
