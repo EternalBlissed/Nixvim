@@ -51,6 +51,17 @@
     })
 
     (pkgs.vimUtils.buildVimPlugin {
+      pname = "img-clip.nvim";
+      version = "2024-04-6";
+      src = pkgs.fetchFromGitHub {
+        owner = "HakonHarnes";
+        repo = "img-clip.nvim";
+        rev = "fc30500c35663aa1762697f5aba31d43b86028f0";
+        hash = "sha256-fMoQ0gpdw7rN7flEAiQvdlqWLHOARVEriyMXX5UfrBQ=";
+      };
+    })
+
+    (pkgs.vimUtils.buildVimPlugin {
       pname = "leetcode-nvim";
       version = "2024-01-28";
       src = pkgs.fetchFromGitHub {
@@ -61,6 +72,8 @@
       };
     })
   ];
+
+
 
   extraConfigLua = ''
     require("scrollbar").setup({
@@ -110,6 +123,12 @@
       key = "<leader>fm";
       action = "<CMD>lua vim.lsp.buf.format()<CR>";
       options.desc = "Format the current buffer";
+    }
+    {
+      # img-clip.nvim
+      key = "<leader>p";
+      action = "<cmd>PasteImage<CR>";
+      options.desc = "Paste image from clipboard";
     }
 
     # Git    

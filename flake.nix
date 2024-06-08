@@ -44,6 +44,12 @@
             bun
             nodejs
 
+            # Lua 
+            stylua
+            lua
+            luajit
+            luajitPackages.luarocks-nix
+
             # Tools
             ripgrep
             lazygit
