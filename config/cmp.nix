@@ -19,6 +19,10 @@
 
     cmp_luasnip = { enable = true; };
 
+    cmp-treesitter = { enable = true; };
+
+    cmp-zsh = { enable = true; };
+
     cmp = {
       enable = true;
 

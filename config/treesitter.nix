@@ -5,6 +5,7 @@
       nixGrammars = true;
       indent = true;
       nixvimInjections = true;
+      ensureInstalled = "all";
     };
     treesitter-context = {
       enable = true;
