@@ -37,6 +37,28 @@
     };
   };
 
+  #colorschemes.base16 = {
+  #  enable = true;
+  #    colorscheme = {
+  #    base00 = "#000000"; # Adwaita Dark: 
+  #    base01 = "#241F31"; #   
+  #    base02 = "#3D3846"; #  
+  #    base03 = "#5E5C64"; # 
+  #    base04 = "#9A9996"; # 
+  #    base05 = "#cdd6f4"; # Catppuccin-Mocha
+  #    base06 = "#f5e0dc"; # 
+  #    base07 = "#b4befe"; # 
+  #    base08 = "#f38ba8"; #
+  #    base09 = "#fab387"; #
+  #    base0A = "#f9e2af"; #
+  #    base0B = "#a6e3a1"; #
+  #    base0C = "#94e2d5"; #
+  #    base0D = "#89b4fa"; #
+  #    base0E = "#cba6f7"; #
+  #    base0F = "#f2cdcd"; #
+  #  };
+  #};
+
   extraPlugins = with pkgs.vimPlugins; [
     nvim-scrollbar
 
