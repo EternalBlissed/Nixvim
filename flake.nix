@@ -54,6 +54,7 @@
             ripgrep
             lazygit
             tmux
+            just
           ];
           packages = with pkgs; [ ];
           shellHook = ''
